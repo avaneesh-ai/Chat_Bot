@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI ChatBot</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="AI ChatBot">
+        <header class="top-bar">
+          <div>
+            <p class="eyebrow">Ollama / llama3</p>
+            <h1>AI ChatBot</h1>
+          </div>
+          <button class="clear-button" id="clearButton" type="button">Clear</button>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <article class="message bot-message">
+            <div class="avatar">AI</div>
+            <p>Welcome to the AI ChatBot.</p>
+          </article>
+        </div>
+
+        <form class="composer" id="chatForm">
+          <label class="sr-only" for="messageInput">Message</label>
+          <textarea
+            id="messageInput"
+            name="message"
+            rows="1"
+            autocomplete="off"
+            placeholder="Ask anything..."
+            required
+          ></textarea>
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
